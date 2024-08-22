@@ -73,4 +73,10 @@ internal class AppScanner: Application.ActivityLifecycleCallbacks {
 }
 
 //TODO: check for sensors accuracy (google how to test)
+//TODO: check if Json conversion is proper
+//TODO: interface for JsonConverter
+//TODO: interface for Interactor
+//TODO: wrapper for AppScanner
 //TODO: pass text, textColor
+//TODO: convert to .aar library
+//TODO: test with importing library in release flavor
