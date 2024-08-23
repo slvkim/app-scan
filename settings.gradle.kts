@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "UiScanner"
 include(":app")
- 
+include(":appScanner")

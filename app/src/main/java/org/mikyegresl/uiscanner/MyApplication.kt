@@ -1,7 +1,7 @@
 package org.mikyegresl.uiscanner
 
 import android.app.Application
-import org.mikyegresl.uiscanner.core.AppScannerBuilder
+import org.mikyegresl.appscanner.core.AppScannerBuilder
 
 internal class MyApplication : Application() {
 
