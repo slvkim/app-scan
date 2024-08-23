@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.StateFlow
 
 interface SensorRepository {
 
-    val sensorDataState: StateFlow<SensorDataState>
+    val sensorDataState: StateFlow<SensorData>
 
     fun initSensors()
 

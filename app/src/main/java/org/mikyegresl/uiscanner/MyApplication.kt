@@ -1,12 +1,12 @@
 package org.mikyegresl.uiscanner
 
 import android.app.Application
-import org.mikyegresl.uiscanner.core.AppScanner
+import org.mikyegresl.uiscanner.core.AppScannerBuilder
 
 internal class MyApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        AppScanner().inject(this)
+        AppScannerBuilder.inject(this)
     }
 }

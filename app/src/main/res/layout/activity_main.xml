@@ -8,37 +8,55 @@
     android:background="@color/material_dynamic_neutral70"
     tools:context=".MainActivity">
 
-<!--    <TextView-->
-<!--        android:id="@+id/tv_message"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Some text here"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/tv_login_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login details"
+        app:layout_constraintBottom_toTopOf="@id/et_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btn_forgot_password"
+    <EditText
+        android:id="@+id/et_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Forgot password"
-        android:layout_marginHorizontal="24dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_login"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="24dp"/>
+        app:layout_constraintBottom_toTopOf="@id/et_password"
+        app:layout_constraintStart_toStartOf="@id/et_password"
+        app:layout_constraintEnd_toEndOf="@id/et_password"
+        android:layout_marginBottom="16dp"/>
 
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="forgot password"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        app:layout_constraintEnd_toEndOf="@id/et_password"/>
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Click me, 123!"
+        android:paddingVertical="16dp"
+        android:text="Login"
         android:layout_marginHorizontal="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="24dp"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

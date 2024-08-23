@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import org.mikyegresl.uiscanner.data.SensorCoordinatesDto
 import org.mikyegresl.uiscanner.domain.sensor.SensorCoordinates
-import org.mikyegresl.uiscanner.domain.sensor.SensorDataState
+import org.mikyegresl.uiscanner.domain.sensor.SensorData
 import org.mikyegresl.uiscanner.domain.sensor.SensorRepository
 import kotlin.math.round
 
@@ -22,7 +22,7 @@ class SensorDataRetrieverImpl(context: Context) : SensorRepository {
     private val gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)
 
     private val _sensorDataState = MutableStateFlow(
-        SensorDataState(
+        SensorData(
             accelerometerData = SensorCoordinates(0f, 0f, 0f),
             gyroscopeData = SensorCoordinates(0f, 0f, 0f)
         )

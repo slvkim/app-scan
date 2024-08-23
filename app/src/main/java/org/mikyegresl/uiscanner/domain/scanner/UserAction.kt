@@ -2,6 +2,8 @@ package org.mikyegresl.uiscanner.domain.scanner
 
 import android.content.res.Resources
 import android.view.MotionEvent
+import org.mikyegresl.uiscanner.data.TouchCoordinatesDto
+import org.mikyegresl.uiscanner.data.UserActionDto
 
 data class UserAction(
     val elementId: String,
@@ -28,3 +30,14 @@ internal fun toUserAction(resources: Resources, viewId: Int, event: MotionEvent,
         timestamp = event.downTime,
         touchCoordinates = TouchCoordinates(x, y),
     )
+
+internal fun UserAction.toDto(): UserActionDto =
+    UserActionDto(
+        elementId = elementId,
+        actionType = actionType.toString(),
+        timestamp = timestamp,
+        touchCoordinates = touchCoordinates.toDto(),
+    )
+
+private fun TouchCoordinates.toDto(): TouchCoordinatesDto =
+    TouchCoordinatesDto(x= x, y = y)
